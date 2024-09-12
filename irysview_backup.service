@@ -1,0 +1,6 @@
+[Unit]
+Description=Backup IrysView DB on BAS
+
+[Service]
+ExecStart=/var/lib/pgsql/pg_irysview.sh
+User=postgres
