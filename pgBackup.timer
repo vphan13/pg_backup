@@ -1,11 +1,11 @@
 [Unit]
-Description=Weekly IrysView_Dev Postgres backup
+Description=Weekly Postgres backup
 
 [Timer]
 # Every Sunday at 2 AM
 #OnCalendar=Sat *-*-* 01:24:00 America/Los_Angeles
 OnCalendar=Sun *-*-* 02:00:00 America/Los_Angeles
-Unit=irysview_backup.service
+Unit=pgBackup.service
 
 [Install]
 WantedBy=timers.target
