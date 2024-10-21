@@ -8,10 +8,10 @@ This script is a wrapper around pg_back package.  It enables directory backup of
  * This has only been tested on RHEL/RPM based systems.
  * You will need the pigz binary installed
     
-        ```yum install pigz```
+        yum install pigz
  * You will need the [pg_back rpm](https://github.com/orgrim/pg_back/releases/download/v2.4.0/pg-back-2.4.0-x86_64.rpm) package installed
 
-        ```yum install https://github.com/orgrim/pg_back/releases/download/v2.4.0/pg-back-2.4.0-x86_64.rpm```
+        yum install https://github.com/orgrim/pg_back/releases/download/v2.4.0/pg-back-2.4.0-x86_64.rpm
  * This script must be run as the postgres account
 
  * If you have a debian host, download the debian package [pg_back deb](https://github.com/orgrim/pg_back/releases/download/v2.5.0/pg-back_2.5.0_linux_amd64.deb)
@@ -32,11 +32,11 @@ exist and are accessible by the postgres account
  * make sure the BackupPath and BackupDir variables in pgBackup.sh 
  * copy pgBackup.timer and pgBackup.service to /etc/systemd/system/
 
-       ``` cp pgBackup.timer pgBackup.service /etc/systemd/system/ && systemctl daemon-reload```
+       cp pgBackup.timer pgBackup.service /etc/systemd/system/ && systemctl daemon-reload
  * edit the timer file to specify run time and frequency
  * enable the timer 
 
-       ``` systemctl enable pgBackup.timer```
+       systemctl enable pgBackup.timer
 
 #### References
 * [systemd/Timers](https://wiki.archlinux.org/index.php/Systemd/Timers#Realtime_timer)
