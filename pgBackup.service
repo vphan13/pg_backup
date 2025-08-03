@@ -1,6 +1,0 @@
-[Unit]
-Description=Backup Postgres DB on host
-
-[Service]
-ExecStart=/var/lib/pgsql/pgBackup.sh
-User=postgres

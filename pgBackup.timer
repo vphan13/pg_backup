@@ -1,11 +1,10 @@
 [Unit]
-Description=Weekly Postgres backup
+Description=Run PostgreSQL backup for %i daily
+Requires=pg-backup@%i.service
 
 [Timer]
-# Every Sunday at 2 AM
-#OnCalendar=Sat *-*-* 01:24:00 America/Los_Angeles
-OnCalendar=Sun *-*-* 02:00:00 America/Los_Angeles
-Unit=pgBackup.service
+OnCalendar=Sat *-*-* 02:00:00 America/Los_Angeles
+Persistent=true
 
 [Install]
 WantedBy=timers.target
