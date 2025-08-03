@@ -5,6 +5,11 @@ After=postgresql.service
 [Service]
 Type=oneshot
 User=postgres
+# Set custom environment variables
+#Environment=PARALLEL_JOBS=8
+#Environment=COMPRESSION_THREADS=8
+#Environment=RETENTION_DAYS=30
+#Environment=BACKUP_PATH=/custom/backup/path
 ExecStart=/var/lib/pgsql/pg_backup.sh %i
 
 [Install]
